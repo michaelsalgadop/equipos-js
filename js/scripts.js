@@ -8,7 +8,7 @@ for (const boton of document.querySelectorAll(".boton")) {
     switch (true) {
       case e.target.classList.contains("gt30"):
         nuevoPre.textContent = JSON.stringify(
-          equiposMayoresEdad(equipos, 18),
+          equiposMayoresEdad(equipos, 30),
           null,
           2
         );
