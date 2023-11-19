@@ -23,5 +23,3 @@ for (const boton of document.querySelectorAll(".boton")) {
 const limpiaConsola = () => {
   consola.textContent = "";
 };
-
-const equiposMayoresEdad = () => {};
