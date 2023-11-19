@@ -1,0 +1,19 @@
+main {
+  background-color: #90a081;
+}
+aside {
+  background-color: #f1ac7b;
+}
+main ul li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.consola {
+  width: 90%;
+  height: 70%;
+  background-color: black;
+  overflow-y: auto;
+}
+.consola pre {
+  color: green;
+}
