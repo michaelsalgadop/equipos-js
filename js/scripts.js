@@ -13,6 +13,13 @@ for (const boton of document.querySelectorAll(".boton")) {
           2
         );
         break;
+      case e.target.classList.contains("tarragona"):
+        nuevoPre.textContent = JSON.stringify(
+          equiposProvincia(equipos, "Tarragona"),
+          null,
+          2
+        );
+        break;
       default:
         break;
     }
