@@ -6,3 +6,7 @@ const equiposMayoresEdad = (equipos, edad) =>
       },
     }) => edadEquipo > edad
   );
+const equiposProvincia = (equipos, provinciaBuscar) =>
+  equipos.filter(
+    ({ asignado: { provincia } }) => provincia === provinciaBuscar
+  );
