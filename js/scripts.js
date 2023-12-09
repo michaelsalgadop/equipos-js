@@ -20,6 +20,9 @@ for (const boton of document.querySelectorAll(".boton")) {
           2
         );
         break;
+      case e.target.classList.contains("provincias"):
+        nuevoPre.textContent = JSON.stringify(provincias(equipos), null, 2);
+        break;
       default:
         break;
     }
