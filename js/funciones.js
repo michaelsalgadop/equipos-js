@@ -63,7 +63,7 @@ const trabajadoresTipo = (equipos, tipo) =>
     .map(({ asignado: { empleado } }) => empleado);
 const equiposPorTipo = (equipos) =>
   equipos.reduce((acumulador, equipo) => {
-    // Extraemos tipo de dentro del equipo
+    // Extraemos tipo de dentro del equipo que estamos iterando
     const { tipo } = equipo;
     /* Busca en el acumulador si ya hay algún array del tipo que estamos pasando,
        Sino, lo que haremos es "crearlo" en el acumulador, ya que todavia no está "creado" => en plan,
@@ -88,3 +88,17 @@ const equiposPorTipo = (equipos) =>
       ];
     }
   }, []);
+const equiposTipoLocalidad = (equipos, tipoBuscar, localidadBuscar) =>
+  equipos.filter((equipo) => {
+    const { tipo } = equipo;
+    const {
+      asignado: { provincia },
+    } = equipo;
+    return tipoBuscar === tipo && localidadBuscar === provincia;
+  });
+const resumenEquipos = (equipos) =>
+  equipos.map((equipo) => ({
+    id: equipo.id,
+    poblacion: equipo.asignado.poblacion,
+    provincia: equipo.asignado.provincia,
+  }));

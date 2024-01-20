@@ -49,6 +49,16 @@ for (const boton of document.querySelectorAll(".boton")) {
       case e.target.classList.contains("equipos-tipo"):
         nuevoPre.textContent = JSON.stringify(equiposPorTipo(equipos), null, 2);
         break;
+      case e.target.classList.contains("portatiles-tarragona"):
+        nuevoPre.textContent = JSON.stringify(
+          equiposTipoLocalidad(equipos, "Portátil", "Tarragona"),
+          null,
+          2
+        );
+        break;
+      case e.target.classList.contains("resumen"):
+        nuevoPre.textContent = JSON.stringify(resumenEquipos(equipos), null, 2);
+        break;
       default:
         break;
     }
