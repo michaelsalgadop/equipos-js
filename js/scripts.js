@@ -26,6 +26,12 @@ for (const boton of document.querySelectorAll(".boton")) {
       case e.target.classList.contains("puestos"):
         nuevoPre.textContent = JSON.stringify(puestos(equipos), null, 2);
         break;
+      case e.target.classList.contains("edad-media"):
+        nuevoPre.textContent = JSON.stringify(edadMedia(equipos), null, 2);
+        break;
+      case e.target.classList.contains("orden-edad"):
+        nuevoPre.textContent = JSON.stringify(equiposPorEdad(equipos), null, 2);
+        break;
       default:
         break;
     }
